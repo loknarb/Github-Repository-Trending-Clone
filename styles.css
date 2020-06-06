@@ -50,8 +50,14 @@ a {
 /* *Repository Section */
 .trending {
     display: block ruby;
+    font-size: .7em;
+    margin-left: 6px;
 }
+
 /* *project title section */
+.title-star-area {
+    margin-left: 6px;
+    }
 .project-title {
     padding-top: 3px;
 }
@@ -145,10 +151,6 @@ a {
 .issues svg path:nth-child(1) {
     fill: black;
 }
-.issues svg path:hover, .pull-requests svg path:hover {
-    fill: black;
-    height: 200%
-}
 .code svg, .issues svg, .pull-requests svg {
     width: 25%;
     position: relative;
@@ -160,6 +162,41 @@ a {
 }
 .issues svg {
     width: 22%;
+}
+/* *Open issue section */
+.open-issue-section {
+    background-color: white;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-left: 6px;
+    padding-top: 10px;
+}
+.open-issue-button {
+    display: flex;
+    float: left;
+    align-items: center;
+    color: white;
+    background-color: #2cbe4e;
+    border-radius: .3em;
+    height: 24px;
+    margin-top: 11px;
+    padding-right: 5px;
+    padding-left: 2px;
+    margin-right: 15px;
+    padding-top: 0px;
+    font-size: 13px;
+}
+.open-issue-button svg {
+    padding-right: 5px;
+}
+.open-issue-button svg:nth-child(1) {    
+    fill: white;
+}
+.issue-title {
+    padding-right: 5px;
+    margin-top: 6.933px;
+    font-size: 18px;
+    line-height: 29px;
 }
 /* !Media Queries */
 @media only screen and (min-width: 350) {
@@ -205,20 +242,6 @@ a {
     grid-template-columns: 1.2fr 1fr;
     grid-template-rows: 1fr;
     }
-/* }
-@media only screen and (min-width: 1000px) {
-    .weblayout {
-        display: grid;
-        grid-template-columns: 0.7fr 1fr 0.7fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "column1 main column2";
-    }
-    .title-star-area {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 1fr;
-    }
-} */
 @media only screen and (min-width: 1200px) {
     .weblayout {
         display: grid;
