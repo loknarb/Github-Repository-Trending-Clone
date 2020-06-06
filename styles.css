@@ -1,0 +1,211 @@
+/* *font-family sans-serif */
+body {
+    font-family: 'Lato', sans-serif;
+}
+/* *grid placement */
+.weblayout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "main";
+}
+
+.title-star-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "project-title star";
+}
+.code-issues-pull {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "code issues pull-requests";
+}
+.star { grid-area: star; }
+.project-title { grid-area: project-title; }
+.column1 { grid-area: column1; }
+.column2 { grid-area: column2; }
+.main { grid-area: main; }
+.code { grid-area: code; }  
+.issues { grid-area: issues; }  
+.pull-requests { grid-area: pull-requests; }
+
+/* *overall */
+a {
+    text-decoration: none;
+}
+/* *Repository Section */
+.trending {
+    display: block ruby;
+}
+/* *project title section */
+.project-title {
+    padding-top: 3px;
+}
+.project-title a {
+    color: blue;
+
+}
+.project-title a:hover {
+    text-decoration: underline blue;
+}
+.boldtext {
+    font-weight: 600;
+}
+.star p {
+    display: inline;
+}
+.project-title p {
+    display: inline;
+}
+/* *project title button */
+.star {
+    display:flex;
+    padding-left: 16px;
+}
+.star a{
+    border: solid 1px black;
+    padding-right: 9px;
+}
+.starbutton {
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 16px;
+    border-left-width: 1px;
+    border-right-width: 0px;
+    border-top-left-radius: .2em;
+    border-bottom-left-radius: .2em;       
+}
+.starbutton svg {
+    position: relative;
+    bottom: -2px;
+}
+.socialcounter {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-top-right-radius: .2em;
+    border-bottom-right-radius: .2em;     
+}
+/* *code issues pull section */
+.code-issues-pull {
+    font-size: 13px;
+    display: flex;
+    border-bottom: 1px solid black;
+    margin-top: 10px;
+    align-items:baseline;
+    
+    }
+.issues, .code, .pull-requests {
+    padding-right: 3px;
+    padding-left: 3px;
+}
+.issues {
+    border-bottom: 1px solid white;
+    margin-bottom: -1px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    
+}
+.code svg, .issues svg, .pull-requests svg {
+    width: 25%;
+    position: relative;
+    bottom: -3px;
+}
+.pull-requests svg {
+    width: 11%;
+}
+.issues svg {
+    width: 22%;
+}
+/* !Media Queries */
+@media only screen and (min-width: 400px) {
+    .weblayout {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "main";
+    }
+    .title-star-area {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+@media only screen and (min-width: 500px) {
+    .weblayout {
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "column1 main column2";
+    }
+}
+@media only screen and (min-width: 700px) {
+    .weblayout {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "column1 main column2";
+    }
+    .star {
+        padding-right: 23px;
+    }
+    .title-star-area {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 1fr;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .weblayout {
+        display: grid;
+        grid-template-columns: 0.7fr 1fr 0.7fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "column1 main column2";
+    }
+    .title-star-area {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .weblayout {
+        display: grid;
+        grid-template-columns: .7fr 1fr .7fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "column1 main column2";
+    }
+    .main {
+        width: 85%;
+        justify-self: center;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .main {
+        width: 80%;
+        justify-self: center;
+}
+}
+@media only screen and (min-width: 1920px) {
+    .weblayout {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr 1.1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "column1 main column2";
+    }
+    .main {
+        width: 60%;
+        justify-self: center;
+    }
+}
