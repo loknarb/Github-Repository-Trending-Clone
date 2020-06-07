@@ -62,11 +62,11 @@ a {
     padding-top: 3px;
 }
 .project-title a {
-    color: blue;
+    color: #3465f7;
 
 }
 .project-title a:hover {
-    text-decoration: underline blue;
+    text-decoration: underline #3465f7;
 }
 .boldtext {
     font-weight: 600;
@@ -80,8 +80,8 @@ a {
 /* *project title button */
 .star {
     display:flex;
-    padding-left: 16px;
     font-size: 12px;
+    margin-left: 3em
 }
 .star a{
     border: solid 1px #e7e7e7;
@@ -146,7 +146,8 @@ a {
     border-right: 1px solid black;
     border-top: 1px solid black;
     background-color: white;
-    
+    border-top-left-radius: 0.2em;
+    border-top-right-radius: 0.2em;
 }
 .issues svg path:nth-child(1) {
     fill: black;
@@ -164,6 +165,10 @@ a {
     width: 22%;
 }
 /* *Open issue section */
+.merge-float-posts {
+    display: flex;
+    background-color: white;
+    }
 .open-issue-section {
     background-color: white;
     padding-top: 0px;
@@ -198,6 +203,16 @@ a {
     font-size: 18px;
     line-height: 29px;
 }
+.posts-count {
+    align-items: center;
+    display: flex;
+    height: 59px;
+    padding-right: 13px;
+}
+.posts-count svg {
+    margin-bottom: 1px;
+    margin-right: 6px;
+}
 /* !Media Queries */
 @media only screen and (min-width: 350) {
     .star {
@@ -229,6 +244,9 @@ a {
         grid-template-rows: 1fr;
         grid-template-areas: "main column2";
     }
+    .main {
+        max-width: 450px;
+    }
 }
 @media only screen and (min-width: 700px) {
     .weblayout {
@@ -242,6 +260,9 @@ a {
     grid-template-columns: 1.2fr 1fr;
     grid-template-rows: 1fr;
     }
+    .star {
+        margin-left: 3em;
+    }
 @media only screen and (min-width: 1200px) {
     .weblayout {
         display: grid;
@@ -249,6 +270,10 @@ a {
         grid-template-rows: 1fr;
         gap: 1px 1px;
         grid-template-areas: "column1 main column2";
+        
+    }
+    .main {
+        max-width: 450px;
     }
     .title-star-area {
         display: grid;
@@ -257,6 +282,7 @@ a {
     }
     .star {
         padding-right: 23px;
+        margin-left: 4em;
     }
 }
 @media only screen and (min-width: 1600px) {
