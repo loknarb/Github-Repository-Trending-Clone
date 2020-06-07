@@ -35,10 +35,10 @@ body {
 }
 .grid-picture-issue-description {
     display: grid;
-  grid-template-columns: 0.2fr 1.6fr;
-  grid-template-rows: 1fr;
-  gap: 1px 1px;
-  grid-template-areas: "profile user-submission";
+    grid-template-columns: 0.2fr 1.6fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "profile user-submission";
 }
 .star { grid-area: star; }
 .project-title { grid-area: project-title; }
@@ -167,6 +167,9 @@ a {
     bottom: -3px;
     fill: black;
 }
+.code a:hover, .issues a:hover, .pull-requests a:hover {
+    color: #00000054;
+}
 .pull-requests svg {
     width: 11%;
 }
@@ -194,14 +197,15 @@ a {
     border-radius: .3em;
     height: 24px;
     margin-top: 11px;
-    padding-right: 5px;
+    padding-right: 7px;
     padding-left: 2px;
-    margin-right: 15px;
+    margin-right: 4px;
     padding-top: 0px;
     font-size: 13px;
 }
 .open-issue-button svg {
     padding-right: 5px;
+    padding-left: 5px;
 }
 .open-issue-button svg:nth-child(1) {    
     fill: white;
@@ -209,8 +213,9 @@ a {
 .issue-title {
     padding-right: 5px;
     margin-top: 6.933px;
-    font-size: 18px;
+    font-size: 21px;
     line-height: 29px;
+    font-weight: 500;
 }
 .posts-count {
     align-items: center;
@@ -258,7 +263,7 @@ a {
 }
 .user-creation-date {
     display: flex;    
-    line-height: 0.4;
+    line-height: 0.5;
     border-bottom: 1px solid grey;
     padding-left: 8px;
     font-size: 11px;
@@ -279,8 +284,7 @@ a {
     padding-left: 10px;
     margin-top: 8.8px;
     max-height: 155px;
-    overflow: hidden;
- 
+    overflow: hidden; 
 }
 .button-read-more {
     display: flex;
@@ -346,6 +350,40 @@ a {
     position: relative;
     right: -5px;
 }
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid #5d5d5d;
+    position: relative;
+}
+.arrow-left::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid #f6f6f6;
+    position: absolute;
+    top: -6px;
+    left: 1px;
+}
+.container {
+    position: relative;
+    right: 0px;
+    width: 9px;
+    bottom: 0px;
+    margin-bottom: -65px;
+    top: 0px;
+    padding-right: 0px;
+    height: 65.2px;
+    padding-bottom: 0px;
+    padding-top: -20px;
+    margin-top: 0px;
+    left: -7px;
+
+}
 /* !Media Queries */
 @media only screen and (min-width: 350) {
     .star {
@@ -370,7 +408,8 @@ a {
         grid-template-rows: 1fr;
     }
     .starbutton {
-        margin-left: 9px
+        margin-left: 9px;
+        background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
     }
 }
 @media only screen and (min-width: 500px) {
