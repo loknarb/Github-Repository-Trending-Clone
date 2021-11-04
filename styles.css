@@ -316,7 +316,7 @@ a {
     margin-left: 8px;
     margin-bottom: 1px;
     position: sticky;
-    background: rgba(255,255,255,1), rgba(255,255,255,0));
+    background: rgba(255,255,255,1), rgba(255,255,255,0);
     background-color: rgba(0, 0, 0, 0);
     background-position-x: 0%;
     background-position-y: 0%;
